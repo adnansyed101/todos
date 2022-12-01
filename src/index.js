@@ -1,4 +1,5 @@
-import "materialize-css/dist/css/materialize.min.css";
-import "materialize-css/dist/js/materialize.min";
+import "/src/assets/styles/styles.css";
+import "/src/assets/styles/normalize.css";
+import { active } from "/src/home.js";
 
-M.AutoInit();
+active();
