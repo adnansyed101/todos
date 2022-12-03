@@ -1,5 +1,7 @@
 import "/src/assets/styles/styles.css";
 import "/src/assets/styles/normalize.css";
-import { active } from "/src/home.js";
+import { changeTab } from "/src/changeTab.js";
 
-active();
+window.changeTab = changeTab;
+
+document.getElementById("defaultOpen").click();

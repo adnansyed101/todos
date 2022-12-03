@@ -17,17 +17,38 @@
     </header>
 
     <section class="sidebar">
-      <ul>
-        <li class="btn active"><span class="material-icons"> home </span> Home</li>
-        <li class="btn"><span class="material-icons"> today </span> Today</li>
-        <li class="btn">
+      <div class="tab">
+        <button class="btn" onclick="changeTab(event, 'Home');" id="defaultOpen">
+          <span class="material-icons"> home </span> Home
+        </button>
+        <button class="btn" onclick="changeTab(event, 'Today');">
+          <span class="material-icons"> today </span> Today
+        </button>
+        <button class="btn" onclick="changeTab(event, 'Week');">
           <span class="material-icons"> date_range </span> This week
-        </li>
-      </ul>
+        </button>
+      </div>
       <h2>Projects</h2>
-      <div class="btn add"><span class="material-icons">add</span> Add</div>
+      <div class="add add-project">
+        <span class="material-icons">add</span> Add
+      </div>
     </section>
-    <div class="main"></div>
+    <div class="main">
+      <div id="Home" class="tabContent">
+        <h1>Inbox</h1>
+        <div class="add add-task">
+          <span class="material-icons">add</span> Add
+        </div>
+      </div>
+
+      <div id="Today" class="tabContent">
+        <h1>Today</h1>
+      </div>
+
+      <div id="Week" class="tabContent">
+        <h1>This Week</h1>
+      </div>
+    </div>
 
     <footer>All rights are reserved by Adnan</footer>
   </body>
