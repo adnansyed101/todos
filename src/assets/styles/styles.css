@@ -76,6 +76,42 @@ header h1 {
   color: var(--primary-dark);
 }
 
+.input-form {
+  display: none;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.input-form .input-task-project {
+  grid-column: 1/3;
+}
+
+.input-form button {
+  border: 1px solid var(--primary-dark);
+  padding: 10px;
+  border-radius: 5px;
+  color: var(--primary-dark);
+  font-size: 1.2rem;
+  font-weight: 900;
+}
+
+.input-form .add-task-project {
+  background-color: #aaffaa;
+}
+
+.input-form .cancel-task-project {
+  background-color: #ffbebe;
+}
+
+.input-form .add-task-project:hover{
+  background-color: #a6f0a6;
+}
+
+.input-form .cancel-task-project:hover {
+  background-color: #eeadad;
+}
+
 footer {
   display: flex;
   justify-content: center;
