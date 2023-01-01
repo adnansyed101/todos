@@ -1,6 +1,4 @@
-import "../src/assets/styles/styles.css";
-import { changeTab } from "../src/changeTab.js";
+import "../src/styles.css";
+import changeTab from "./changeTab";
 
-window.changeTab = changeTab;
-
-document.getElementById("defaultOpen").click();
+changeTab();

@@ -5,67 +5,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
     <title>Todos</title>
   <script defer src="main.js"></script></head>
   <body>
-    <!-- header -->
-    <header>
-      <h1>TODOS</h1>
-    </header>
-
-    <section class="sidebar">
-      <div class="tab">
-        <button
-          class="btn"
-          onclick="changeTab(event, 'Home');"
-          id="defaultOpen"
-        >
-          <span class="material-icons"> home </span> Home
-        </button>
-        <button class="btn" onclick="changeTab(event, 'Today');">
-          <span class="material-icons"> today </span> Today
-        </button>
-        <button class="btn" onclick="changeTab(event, 'Week');">
-          <span class="material-icons"> date_range </span> This week
-        </button>
-      </div>
-      <div class="projects">
-        <h2>Projects</h2>
-        <div class="add add-project">
-          <span class="material-icons">add</span> Add
+    <main>
+      <header>
+        <h1>TODOS</h1>
+      </header>
+      <section class="sidebar">
+        <ul class="tabs">
+          <li data-tab-target="#home" class="tab active">
+            <i class="fa-solid fa-house"></i> Home
+          </li>
+          <li data-tab-target="#today" class="tab">
+            <i class="fa-solid fa-calendar-day"></i> Today
+          </li>
+          <li data-tab-target="#this-week" class="tab">
+            <i class="fa-solid fa-calendar-days"></i> This week
+          </li>
+        </ul>
+        <div class="projects">
+          <h2>Projects</h2>
+          <button class="btn add-project">
+            <i class="fa-solid fa-plus"></i> Project
+          </button>
         </div>
-        <div class="input-form">
-          <input type="text" class="input-task-project" />
-          <button class="add-task-project">Add</button>
-          <button class="cancel-task-project">Cancel</button>
+      </section>
+      <!-- Tab Contents -->
+      <section class="tabContent">
+        <div id="home" data-tab-content class="active">
+          <h1>Inbox</h1>
+          <button class="btn add-task">
+            <i class="fa-solid fa-plus"></i> Task
+          </button>
         </div>
-      </div>
-    </section>
-    <div class="main">
-      <div id="Home" class="tabContent">
-        <h1>Inbox</h1>
-        <div class="add add-task">
-          <span class="material-icons">add</span> Add Task
+        <div id="today" data-tab-content>
+          <h1>Today</h1>
         </div>
-        <div class="input-form">
-          <input type="text" class="input-task-project" />
-          <button class="add-task-project">Add</button>
-          <button class="cancel-task-project">Cancel</button>
+        <div id="this-week" data-tab-content>
+          <h1>This Week</h1>
         </div>
-      </div>
-
-      <div id="Today" class="tabContent">
-        <h1>Today</h1>
-      </div>
-
-      <div id="Week" class="tabContent">
-        <h1>This Week</h1>
-      </div>
-    </div>
-
-    <footer>All rights are reserved by Adnan</footer>
+      </section>
+      <footer>All rights are reserved by Adnan</footer>
+    </main>
   </body>
 </html>
