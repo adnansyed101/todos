@@ -87,3 +87,75 @@ footer {
   grid-column: 1/3;
   grid-row: 3/4;
 }
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  border: 1px solid var(--primary-dark);
+  border-radius: 10px;
+  z-index: 10;
+  background-color: var(--primary-light);
+  width: 600px;
+  max-width: 80%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  padding: 20px 15px;
+}
+
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modal input {
+  border: 1px solid var(--primary-dark);
+  padding: 10px;
+  font-size: 1.6rem;
+  grid-column: 1/3;
+}
+
+.modal button {
+  border: 1px solid var(--primary-dark);
+  padding: 10px;
+  border-radius: 5px;
+  color: var(--primary-dark);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.modal .add-btn {
+  background-color: #aaffaa;
+}
+
+.modal .cancel-btn {
+  background-color: #ffbebe;
+}
+
+.modal .add-btn:hover {
+  background-color: #a6f0a6;
+}
+
+.modal .cancel-btn:hover {
+  background-color: #eeadad;
+}
+
+#overlay {
+  position: fixed;
+  opacity: 0;
+  transform: 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}

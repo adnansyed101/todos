@@ -32,7 +32,7 @@
         </ul>
         <div class="projects">
           <h2>Projects</h2>
-          <button class="btn add-project">
+          <button class="btn add-project" data-modal-target="#modal">
             <i class="fa-solid fa-plus"></i> Project
           </button>
         </div>
@@ -41,7 +41,7 @@
       <section class="tabContent">
         <div id="home" data-tab-content class="active">
           <h1>Inbox</h1>
-          <button class="btn add-task">
+          <button class="btn add-task" data-modal-target="#modal">
             <i class="fa-solid fa-plus"></i> Task
           </button>
         </div>
@@ -54,5 +54,12 @@
       </section>
       <footer>All rights are reserved by Adnan</footer>
     </main>
+    <!-- Modal -->
+    <div class="modal" id="modal">
+      <input type="text" />
+      <button class="add-btn" type="submit">Add</button>
+      <button class="cancel-btn" data-close-button>Cancel</button>
+    </div>
+    <div id="overlay"></div>
   </body>
 </html>
