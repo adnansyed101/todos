@@ -32,7 +32,7 @@
         </ul>
         <div class="projects">
           <h2>Projects</h2>
-          <button class="btn add-project" data-modal-target="#modal">
+          <button class="btn add-project" data-modal-target="#project">
             <i class="fa-solid fa-plus"></i> Project
           </button>
         </div>
@@ -41,26 +41,18 @@
       <section class="tabContent">
         <div id="home" data-tab-content class="active">
           <h1>Inbox</h1>
-          <button class="btn add-task" data-modal-target="#modal">
+          <button class="btn add-task" data-modal-target="#task">
             <i class="fa-solid fa-plus"></i> Task
           </button>
           <table>
             <thead>
               <tr>
-                <th>Serial No.</th>
                 <th>Description</th>
                 <th>Date</th>
                 <th>&nbsp;</th>
               </tr>
             </thead>
-            <tbody class="tasks">
-              <tr>
-                <td>1</td>
-                <td>Walk The Dog</td>
-                <td><input type="date" /></td>
-                <td><i class="fa-solid fa-trash"></i></td>
-              </tr>
-            </tbody>
+            <tbody class="tasks"></tbody>
           </table>
         </div>
         <div id="today" data-tab-content>
@@ -73,11 +65,22 @@
       <footer>All rights are reserved by Adnan</footer>
     </main>
     <!-- Modal -->
-    <div class="modal" id="modal">
-      <input type="text" />
-      <button class="add-btn" type="submit">Add</button>
-      <button class="cancel-btn" data-close-button>Cancel</button>
+    <div class="modals">
+      <form class="modal" id="task">
+        <input type="text" />
+        <button class="add-btn" data-close-button type="submit">Add</button>
+        <button class="cancel-btn" data-close-button type="button">
+          Cancel
+        </button>
+      </form>
+      <form class="modal" id="project">
+        <input type="text" />
+        <button class="add-btn" data-close-button type="submit">Add</button>
+        <button class="cancel-btn" data-close-button type="button">
+          Cancel
+        </button>
+      </form>
+      <div id="overlay"></div>
     </div>
-    <div id="overlay"></div>
   </body>
 </html>
