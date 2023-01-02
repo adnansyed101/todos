@@ -79,6 +79,25 @@ header h1 {
   display: block;
 }
 
+/* Home */
+table {
+  border-collapse: collapse;
+  border: 1px solid var(--primary-dark);
+  letter-spacing: 1px;
+  font-size: 1.25rem;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid var(--primary-dark);
+  padding: 10px 20px;
+}
+
+td {
+  text-align: center;
+}
+
 footer {
   display: grid;
   place-items: center;
