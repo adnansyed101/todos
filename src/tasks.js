@@ -1,6 +1,6 @@
 function tasks() {
   const taskForm = document.querySelector("#task");
-  const taskInput = document.querySelector("#task input");
+  const taskInput = taskForm.querySelector("input");
   const tasksTable = document.querySelector(".tasks");
 
   taskForm.addEventListener("submit", (e) => {
