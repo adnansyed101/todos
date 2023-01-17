@@ -30,12 +30,6 @@
             <i class="fa-solid fa-calendar-days"></i> This week
           </li>
         </ul>
-        <div class="projects">
-          <h2>Projects</h2>
-          <button class="btn add-project" data-modal-target="#project">
-            <i class="fa-solid fa-plus"></i> Project
-          </button>
-        </div>
       </section>
       <!-- Tab Contents -->
       <section class="tabContent">
@@ -65,22 +59,11 @@
       <footer>All rights are reserved by Adnan</footer>
     </main>
     <!-- Modal -->
-    <div class="modals">
-      <form class="modal" id="task">
-        <input type="text" />
-        <button class="add-btn" data-close-button type="submit">Add</button>
-        <button class="cancel-btn" data-close-button type="button">
-          Cancel
-        </button>
-      </form>
-      <form class="modal" id="project">
-        <input type="text" />
-        <button class="add-btn" data-close-button type="submit">Add</button>
-        <button class="cancel-btn" data-close-button type="button">
-          Cancel
-        </button>
-      </form>
-      <div id="overlay"></div>
-    </div>
+    <form class="modal" id="task">
+      <input type="text" required />
+      <button class="add-btn" data-close-button type="submit">Add</button>
+      <button class="cancel-btn" data-close-button type="button">Cancel</button>
+    </form>
+    <div id="overlay"></div>
   </body>
 </html>

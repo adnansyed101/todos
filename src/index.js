@@ -1,13 +1,26 @@
-import "../src/styles.css";
-import changeTab from "./changeTab";
+import styles from "./styles.css";
 import modal from "./modal";
-import tasks from "./tasks";
-import forms from "./forms";
-
-changeTab();
+import { taskForm, tasksTable, cancelBtn } from "./variables";
+import changeTabs from "./changeTab";
 
 modal();
+changeTabs();
 
-tasks();
+taskForm.addEventListener("submit", (e) => {
+  tasksTable.innerHTML += `
+      <tr>
+      <td>${taskInput.value}</td>
+      <td><input type="date" /></td>
+      <td><i class="fa-solid fa-trash"></i></td>
+      </tr>`;
+  taskInput.value = "";
+  e.preventDefault();
+});
 
-forms();
+tasksTable.addEventListener("click", (e) => {
+  if (e.target.classList.contains("fa-trash")) {
+    e.target.parentElement.parentElement.remove();
+  }
+});
+
+cancelBtn.addEventListener("click", () => (taskInput.value = ""));

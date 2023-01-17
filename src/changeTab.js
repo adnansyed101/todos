@@ -1,7 +1,6 @@
-function changeTab() {
-  const tabs = document.querySelectorAll("[data-tab-target]");
-  const tabContents = document.querySelectorAll("[data-tab-content]");
+import { tabs, tabContents } from "./variables";
 
+function changeTabs() {
   tabs.forEach((tab) => {
     tab.addEventListener("click", () => {
       const target = document.querySelector(tab.dataset.tabTarget);
@@ -17,4 +16,4 @@ function changeTab() {
   });
 }
 
-export default changeTab;
+export default changeTabs;
