@@ -2,68 +2,60 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <title>Todos</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"
+      defer
+    ></script>
+    <title>Task List</title>
   </head>
   <body>
-    <main>
-      <header>
-        <h1>TODOS</h1>
-      </header>
-      <section class="sidebar">
-        <ul class="tabs">
-          <li data-tab-target="#home" class="tab active">
-            <i class="fa-solid fa-house"></i> Home
-          </li>
-          <li data-tab-target="#today" class="tab">
-            <i class="fa-solid fa-calendar-day"></i> Today
-          </li>
-          <li data-tab-target="#this-week" class="tab">
-            <i class="fa-solid fa-calendar-days"></i> This week
-          </li>
-        </ul>
-      </section>
-      <!-- Tab Contents -->
-      <section class="tabContent">
-        <div id="home" data-tab-content class="active">
-          <h1>Inbox</h1>
-          <button class="btn add-task" data-modal-target="#task">
-            <i class="fa-solid fa-plus"></i> Task
-          </button>
-          <table>
-            <thead>
-              <tr>
-                <th>Description</th>
-                <th>Date</th>
-                <th>&nbsp;</th>
-              </tr>
-            </thead>
-            <tbody class="tasks"></tbody>
-          </table>
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          <div id="main" class="card">
+            <div class="card-content">
+              <span class="card-title">Task List</span>
+              <div class="row">
+                <form id="task-form">
+                  <div class="input-field col s12">
+                    <input type="text" name="task" id="task" />
+                    <label for="task">New Task</label>
+                  </div>
+                  <input type="submit" value="Add Task" class="btn" />
+                </form>
+              </div>
+            </div>
+            <div class="card-action">
+              <h5 id="task-title">Tasks</h5>
+              <div class="input-field col s12">
+                <input type="text" name="filter" id="filter" />
+                <label for="filter">Filter Tasks</label>
+              </div>
+              <ul class="collection"></ul>
+              <a href="#" class="clear-tasks btn black">Clear Tasks</a>
+            </div>
+          </div>
         </div>
-        <div id="today" data-tab-content>
-          <h1>Today</h1>
-        </div>
-        <div id="this-week" data-tab-content>
-          <h1>This Week</h1>
-        </div>
-      </section>
-      <footer>All rights are reserved by Adnan</footer>
-    </main>
-    <!-- Modal -->
-    <form class="modal" id="task">
-      <input type="text" required />
-      <button class="add-btn" data-close-button type="submit">Add</button>
-      <button class="cancel-btn" data-close-button type="button">Cancel</button>
-    </form>
-    <div id="overlay"></div>
+      </div>
+    </div>
   </body>
 </html>
